@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(/assets/images/DALL·E\ 2023-03-02\ 18.02.31\ -\ background\ with\ color\ theme\ pink\ and\ vr\ glasses_adobe_express.svg);
+    background-size: cover;
+    background-position: -5px 0px;
+}
+@import "./variables.scss";
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Tera:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import "./header.scss";
+@import "./main.scss";
+@import "./buttons.scss";
+@import "./footer.scss";
+

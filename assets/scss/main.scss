@@ -1,0 +1,106 @@
+
+main{
+    margin: 20px 0px;
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 0;
+}
+.main-article{
+    height: 100vh;
+}
+#main-article-1{
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    border: none;
+    border-radius: 30px;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    font-family: $font;
+    color: $color-primary;
+    display: flex;
+    align-items: center;
+    #main-article-1-slider{
+        width: 50%;
+        height:100%;
+        margin-right: 5px;
+        overflow: hidden;
+    }
+    .slides{
+        width: 400%;
+        height: 400px;
+        display: flex;
+        input{
+            display: none;
+        }
+        .slide{
+            width: 25%;
+            position: relative;
+            img{
+                width: 100%;
+            }
+        }
+    }
+    #radio1:checked ~ .first{
+        margin-right: 5px;
+    }
+    #radio2:checked ~ .first{
+        margin-left: -25%;
+    }
+    #radio3:checked ~ .first{
+        margin-left: -50%;
+    }
+    #radio4:checked ~ .first{
+        margin-left: -75%;
+    }
+   
+    #main-article-1-text{
+        width: 50%;
+        padding: 0px 7px;
+        margin: auto;
+    }
+    
+    h1{
+        font-size: 5.5vh;
+    }
+    p{
+        font-size: 3vh;
+        text-align: justify;
+        margin: 15px 0;
+    }
+    #main-article-1-text-buttons{
+        display: flex;
+        margin-top: 50px;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+}
+@media screen and (max-width:768px){
+    #main-article-1{
+        flex-direction: column;
+        #main-article-1-slider{
+            height:50vh;
+            margin-bottom: 10px;
+        }
+        h1{
+            text-align: center;
+            font-size: 4vh;
+        }
+        p{
+            text-align: center;
+            font-size: 2vh;
+        }
+        #main-article-1-text{
+           height: auto;
+        }
+    }
+    #main-article-1-text-buttons{
+        flex-direction: column;
+        .bntdemo{
+            margin-top: 15px;
+        }
+    }
+    
+
+}

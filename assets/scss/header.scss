@@ -1,0 +1,92 @@
+header{
+    color:$color-primary;
+    width: 100%;
+    height: auto;
+}
+#header-container{
+    width: 100%;
+    height: auto;
+}
+#header-container-logo{
+    h1{
+        display: inline-block;
+        cursor: pointer;
+    }
+    border-bottom: solid rgba($color: $color-primary, $alpha: 0.1);
+    text-align: center;
+    font-family: $font;
+    padding: 15px;
+    background: $main-gradient;
+    background-size: $logo-theme-bgsize;
+    animation: gradient-animation 15s ease infinite;
+}
+
+
+#header-container-nav{
+    height: 100%;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    #header-container-nav-ul{
+        padding: 20px;
+        color: $color-primary;
+        display: flex;
+        list-style: none;
+        font-family: $font;
+        font-weight: 200;
+        li{
+            cursor: pointer;
+            margin: 0 8px;
+        }
+    }
+    #header-container-nav-search{
+        width: 50%;
+        padding: 20px;
+    }
+    #header-container-nav-search-div{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        input{
+
+            margin: 0px 3px;
+            color: $color-primary;
+            padding: 5px 7px;
+            outline: none;
+            border: none;
+            border-radius: 30px;
+            background-color: rgba($color:$color-primary, $alpha: 0.4);
+            width: 60%;
+            height: 100%;
+        }
+    }
+}
+@media screen and (max-width:768px){
+    #header-container-nav{
+        flex-direction: column-reverse;
+
+        #header-container-nav-ul{
+            justify-content: space-between;
+            flex-direction: column;
+            align-items: center;
+            :nth-child(2){
+                margin: 10px 0;
+                border-top: 1px solid white;
+                border-bottom: 1px solid white;
+                padding: 5px 0;
+            }
+        }
+
+        #header-container-nav-search{
+            width: 100%;
+            #header-container-nav-search-div{
+                justify-content: center;
+            }
+        }
+    }
+
+}
